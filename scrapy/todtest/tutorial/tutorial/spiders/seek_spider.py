@@ -50,7 +50,7 @@ class SeekJavaSpider(scrapy.Spider):
         jobTitle=response.css('h1.jobtitle::text').extract_first().strip()
         self.log('---- details: job title is : '+jobTitle)
         # yield jobtitle
-        jobDesc=response.css('div.templatetext::text').extract_first().strip()
+        jobDesc=response.css('div.templatetext').extract_first()
         self.log('---- details: job description is : '+jobDesc)
         # for theTitle in jobTitle:   
         #     self.log('---- details: job title is : '+theTitle)
