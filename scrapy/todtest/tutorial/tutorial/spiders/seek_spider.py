@@ -10,6 +10,7 @@ class SeekJavaSpider(scrapy.Spider):
         # 'http://quotes.toscrape.com'
         'https://www.seek.com.au/jobs-in-information-communication-technology/in-All-Sydney-NSW?page=7&salaryrange=120000-999999&salarytype=annual',
         # 'https://ms.taleo.net/careersection/2/moresearch.ftl'
+        # 'scrapy shell -s USER_AGENT="Mozilla/5.0" 'https://www.gumtree.com/computing-it-jobs''
     ]
 
     
