@@ -1,4 +1,8 @@
 import scrapy
+from tutorial.items import JobItem 
+from scrapy.loader import ItemLoader
+from scrapy.loader.processors import TakeFirst, MapCompose,Join
+from w3lib.html import remove_tags
 
 
 class SeekJavaSpider(scrapy.Spider):
@@ -50,8 +54,20 @@ class SeekJavaSpider(scrapy.Spider):
         self.log('------------ ender parseDetails------------')
         jobTitle=response.css('h1.jobtitle::text').extract_first().strip()
         self.log('---- details: job title is : '+jobTitle)
+        
+
         # yield jobtitle
         jobDesc=response.css('div.templatetext').extract_first()
         self.log('---- details: job description is : '+jobDesc)
         # for theTitle in jobTitle:   
         #     self.log('---- details: job title is : '+theTitle)
+
+        job=JobItem()
+        job['title']=jobTitle
+        job['description']=jobDesc
+
+        il=ItemLoader(item=JobItem(),response=response)
+        il.add_xpath('title','//h1[@class="jobtitle"]')
+        il.add_css('description','div.templatetext')
+
+        return il.load_item()
