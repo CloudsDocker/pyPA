@@ -1,0 +1,13 @@
+Cteonnt-Length: 53880
+Expires: Sat, 12 Nov 2016 11:18:44 GMT
+Content-Security-Policy: block-all-mixed-content
+Content-Encoding: gzip
+Set-Cookie: ca=.; path=/
+Strict-Transport-Security: max-age=157680000
+Content-Security-Policy-Report-Only: default-src 'self' https: data: crwebinvoke: crwebinvokeimmediate: crwebnull:; style-src 'self' https: data: 'unsafe-inline'; script-src 'self' https: data: about: asset: blob: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: about:; font-src 'self' https: data:; connect-src 'self' https: data: javascript; frame-src 'self' https: data: file:; media-src 'self' https: data:; object-src 'self' https: data:; report-uri https://csp.cloud.seek.com.au/reportOnly/index
+X-Ua-Compatible: IE=Edge;chrome=1
+Pragma: no-cache
+Cache-Control: private, no-store
+Date: Sun, 13 Nov 2016 11:18:44 GMT
+Access-Control-Allow-Headers: X-Seek-Site, X-SeekAPI-Locale, Authorization, Content-Type, Cache-Control, X-Seek-EC-SessionId, X-Requested-With
+Content-Type: text/html; charset=utf-8

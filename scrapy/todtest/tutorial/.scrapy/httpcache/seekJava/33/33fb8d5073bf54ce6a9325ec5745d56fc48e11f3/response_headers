@@ -1,0 +1,16 @@
+Strict-Transport-Security: max-age=157680000
+Ntcoent-Length: 1399
+Content-Security-Policy: block-all-mixed-content
+Content-Encoding: gzip
+Set-Cookie: ASP.NET_SessionId=45navn52q04hur4koi1zungf; path=/; secure; HttpOnly
+Set-Cookie: JobseekerSessionId=2951a6ad-6744-4840-80db-2aaa7e2d69b8; domain=seek.com.au; path=/
+Set-Cookie: JobseekerVisitorId=d21f73d7-f1a2-497d-93bc-3eeaa9d1f4f3; domain=seek.com.au; expires=Sat, 13-Nov-2021 11:18:41 GMT; path=/
+Set-Cookie: responsive-trial=unknown:9; domain=seek.com.au; expires=Sun, 12-Nov-2017 13:00:00 GMT; path=/
+Expires: -1
+Content-Security-Policy-Report-Only: default-src 'self' https: data: crwebinvoke: crwebinvokeimmediate: crwebnull:; style-src 'self' https: data: 'unsafe-inline'; script-src 'self' https: data: about: asset: blob: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: about:; font-src 'self' https: data:; connect-src 'self' https: data: javascript; frame-src 'self' https: data: file:; media-src 'self' https: data:; object-src 'self' https: data:; report-uri https://csp.cloud.seek.com.au/reportOnly/index
+X-Ua-Compatible: IE=Edge;chrome=1
+Pragma: no-cache
+Cache-Control: no-cache, no-store, must-revalidate
+Date: Sun, 13 Nov 2016 11:18:41 GMT
+Access-Control-Allow-Headers: X-Seek-Site, X-SeekAPI-Locale, Authorization, Content-Type, Cache-Control, X-Seek-EC-SessionId, X-Requested-With
+Content-Type: text/plain

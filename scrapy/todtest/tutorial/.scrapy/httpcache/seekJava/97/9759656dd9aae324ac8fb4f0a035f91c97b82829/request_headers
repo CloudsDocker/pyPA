@@ -1,0 +1,6 @@
+Accept-Language: en
+Accept-Encoding: gzip,deflate
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Scrapy/1.1.2 (+http://scrapy.org)
+Cookie: ASP.NET_SessionId=45navn52q04hur4koi1zungf; JobseekerVisitorId=d21f73d7-f1a2-497d-93bc-3eeaa9d1f4f3; JobseekerSessionId=2951a6ad-6744-4840-80db-2aaa7e2d69b8; responsive-trial=unknown:9
+Referer: https://www.seek.com.au/jobs-in-information-communication-technology/in-All-Sydney-NSW?page=7&salaryrange=120000-999999&salarytype=annual

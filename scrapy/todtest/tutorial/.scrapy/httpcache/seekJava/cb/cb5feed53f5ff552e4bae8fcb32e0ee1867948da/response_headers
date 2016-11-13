@@ -1,0 +1,10 @@
+X-Request-Id: 6347875A-A621-4AE5-A844-7FBA4DEBCC1C
+X-Powered-By: Express
+Strict-Transport-Security: max-age=157680000
+Vary: Accept-Encoding
+Server: nginx
+Content-Security-Policy-Report-Only: default-src 'self' https: data: crwebinvoke: crwebinvokeimmediate: crwebnull:; style-src 'self' https: data: 'unsafe-inline'; script-src 'self' https: data: about: asset: blob: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: about:; font-src 'self' https: data:; connect-src 'self' https: data: javascript; frame-src 'self' https: data: file:; media-src 'self' https: data:; object-src 'self' https: data:; report-uri https://csp.cloud.seek.com.au/reportOnly/index
+Etag: W/"45d1f-ilhfVZUdQ/EQ48Bl+MCFdw"
+Date: Sun, 13 Nov 2016 11:18:42 GMT
+Content-Type: text/html; charset=utf-8
+Content-Encoding: gzip
