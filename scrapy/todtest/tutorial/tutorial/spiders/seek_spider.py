@@ -1,9 +1,10 @@
 import scrapy
+import datetime
 from tutorial.items import JobItem 
 from scrapy.loader import ItemLoader
 from scrapy.loader.processors import TakeFirst, MapCompose,Join
 from w3lib.html import remove_tags
-
+import time
 
 class SeekJavaSpider(scrapy.Spider):
     name = "seekJava"
@@ -16,7 +17,6 @@ class SeekJavaSpider(scrapy.Spider):
         # 'https://ms.taleo.net/careersection/2/moresearch.ftl'
         # 'scrapy shell -s USER_AGENT="Mozilla/5.0" 'https://www.gumtree.com/computing-it-jobs''
     ]
-
     
 
     def parse(self, response):
@@ -34,13 +34,14 @@ class SeekJavaSpider(scrapy.Spider):
             nextPage=item.extract()
             self.log('------ {}:{}'.format(idx,nextPage))
             print nextPage
-            yield {
-                'url':nextPage,
-            }
+            # yield {
+            #     'url':nextPage,
+            # }
 
             if nextPage is not None:
                 nextPage=response.urljoin(nextPage)
                 self.log('~~~~~ new link is : '+nextPage)
+                # time.sleep(1)
                 pagesToViewDetails.append(nextPage)
                 # yield scrapy.Request(nextPage,callback=self.parse)
 
@@ -52,22 +53,24 @@ class SeekJavaSpider(scrapy.Spider):
 
     def parseDetails(self, response):
         self.log('------------ ender parseDetails------------')
-        jobTitle=response.css('h1.jobtitle::text').extract_first().strip()
-        self.log('---- details: job title is : '+jobTitle)
+        # jobTitle=response.css('h1.jobtitle::text').extract_first().strip()
+        # self.log('---- details: job title is : '+jobTitle)
         
 
         # yield jobtitle
-        jobDesc=response.css('div.templatetext').extract_first()
-        self.log('---- details: job description is : '+jobDesc)
+        # jobDesc=response.css('div.templatetext').extract_first()
+        # self.log('---- details: job description is : '+jobDesc)
         # for theTitle in jobTitle:   
         #     self.log('---- details: job title is : '+theTitle)
 
-        job=JobItem()
-        job['title']=jobTitle
-        job['description']=jobDesc
+        # job=JobItem()
+        # job['title']=jobTitle
+        # job['description']=jobDesc
 
         il=ItemLoader(item=JobItem(),response=response)
-        il.add_xpath('title','//h1[@class="jobtitle"]')
+        il.add_xpath('title','//h1[@class="jobtitle"]/text()',MapCompose(lambda i:remove_tags(i)))
         il.add_css('description','div.templatetext')
+        il.add_value('url',response.url)
+        il.add_value('indexTime',datetime.datetime.now())
 
         return il.load_item()

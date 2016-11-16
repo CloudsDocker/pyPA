@@ -16,4 +16,7 @@ class JobItem(scrapy.Item):
     title = Field()
     description = Field()
 
+    url = Field()
+    indexTime = Field()
+
     pass

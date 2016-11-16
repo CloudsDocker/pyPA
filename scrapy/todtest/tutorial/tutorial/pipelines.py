@@ -6,6 +6,8 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 
-class TutorialPipeline(object):
+@defer .inlineCallbacks
+class JobESPipeline(object):
     def process_item(self, item, spider):
-        return item
+    	data=json.dumps(dict(item),ensure_ascii=true).encode("utf-8")
+        yield treq.post(self.es_url,data)
